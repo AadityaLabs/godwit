@@ -1,0 +1,90 @@
+/* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #16112B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3B2F6E;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7C5DFA;
+        }
+
+        /* Preloader Animation */
+        #preloader {
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        #preloader.hidden-loader {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        /* Floating Glass Navbar */
+        .nav-glass {
+            background: rgba(22, 17, 43, 0.78);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.55);
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button Shimmer & Glow Micro-interactions */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+            transform: skewX(-25deg);
+            transition: left 0.6s ease;
+        }
+        .btn-glow:hover::after {
+            left: 140%;
+        }
+        .btn-glow:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px -5px rgba(124, 93, 250, 0.55);
+        }
+        .btn-glow:active {
+            transform: scale(0.97);
+        }
+
+        /* Reference-inspired Mesh Gradient Background */
+        .hero-mesh {
+            background-color: #16112B;
+            background-image: 
+                radial-gradient(at 15% 15%, rgba(124, 93, 250, 0.28) 0px, transparent 50%),
+                radial-gradient(at 85% 25%, rgba(14, 165, 233, 0.18) 0px, transparent 45%),
+                radial-gradient(at 50% 85%, rgba(59, 47, 110, 0.35) 0px, transparent 55%);
+        }
+
+        /* Card Hover Lift */
+        .premium-card {
+            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+        .premium-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(155, 135, 245, 0.45);
+            box-shadow: 0 22px 40px -15px rgba(12, 8, 28, 0.7);
+        }
